@@ -39,12 +39,18 @@ import org.springframework.ui.freemarker.FreeMarkerTemplateUtils;
 import java.io.IOException;
 import java.util.Map;
 import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * MessageService.
  */
 @Slf4j
 public class MessageService {
+
+    /**
+     * TN_PATTERN.
+     */
+    private static final Pattern TN_PATTERN = Pattern.compile(".*\\+1(\\d{10}).*");
 
     /**
      * TEMPLATE_LOCATION.
